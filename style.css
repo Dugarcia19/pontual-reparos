@@ -1,17 +1,18 @@
 ﻿/* Professional branding stylesheet for Pontual Reparos */
 :root {
-  --bg: #e7f2ff;
+  --bg: #eff4fb;
   --surface: #ffffff;
-  --surface-soft: #f9fbff;
-  --surface-muted: #e8f1fb;
-  --text: #0e273f;
-  --muted: #4f6f8f;
-  --accent: #ffb000;
-  --accent-dark: #b67500;
-  --accent-soft: rgba(255, 176, 0, 0.14);
-  --border: rgba(14, 39, 63, 0.1);
+  --surface-soft: #f8fbff;
+  --surface-muted: #e5ecf6;
+  --text: #0f2238;
+  --muted: #62758c;
+  --accent: #2657cc;
+  --accent-dark: #1b3f8b;
+  --accent-soft: rgba(38, 87, 204, 0.14);
+  --accent-alt: #f4b84a;
+  --border: rgba(53, 97, 176, 0.12);
   --radius: 20px;
-  --shadow: 0 24px 60px rgba(16, 38, 63, 0.12);
+  --shadow: 0 22px 48px rgba(15, 34, 67, 0.12);
 }
 * {
   box-sizing: border-box;
@@ -24,7 +25,7 @@ html {
 body {
   margin: 0;
   font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
-  background: linear-gradient(180deg, #edf5ff 0%, #d7e6ff 30%, #f5f8ff 100%);
+  background: linear-gradient(180deg, #f4f8ff 0%, #eef4fd 45%, #f6f9ff 100%);
   color: var(--text);
   -webkit-font-smoothing: antialiased;
 }
@@ -126,8 +127,8 @@ select {
 
 .nav-list a:hover,
 .nav-list a:focus-visible {
-  background: rgba(255, 176, 0, 0.14);
-  color: #113255;
+  background: rgba(38, 87, 204, 0.12);
+  color: var(--accent-dark);
 }
 
 .header-btn {
@@ -135,8 +136,8 @@ select {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background: linear-gradient(135deg, #ffd170, #ff9f0f);
-  color: #071727;
+  background: linear-gradient(135deg, #2657cc, #1f4fac);
+  color: #ffffff;
 }
 
 .mobile-toggle {
@@ -150,14 +151,14 @@ select {
 .hero {
   position: relative;
   padding: 6rem 0 5rem;
-  background: linear-gradient(145deg, rgba(3, 37, 72, 0.82), rgba(15, 55, 92, 0.64)), url('images/hero-forro.jpg') center/cover no-repeat;
+  background: linear-gradient(145deg, rgba(15, 45, 94, 0.88), rgba(24, 64, 120, 0.78)), url('images/hero-forro.jpg') center/cover no-repeat;
   background-blend-mode: overlay;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at top left, rgba(255, 176, 0, 0.16), transparent 35%), linear-gradient(180deg, rgba(3, 37, 72, 0.42), rgba(10, 40, 80, 0.24));
+  background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.08), transparent 30%), linear-gradient(180deg, rgba(17, 50, 102, 0.38), rgba(14, 40, 84, 0.22));
 }
 
 .hero-content {
@@ -185,7 +186,7 @@ select {
 }
 
 .hero-sub {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.88);
   max-width: 680px;
   line-height: 1.75;
   font-size: 1.05rem;
@@ -271,27 +272,27 @@ select {
 }
 
 .about {
-  background: #f6fbff;
+  background: #f7fbff;
 }
 
 .services {
-  background: linear-gradient(180deg, #fff9ef 0%, #fff5df 100%);
+  background: #ffffff;
 }
 
 .benefits {
-  background: linear-gradient(180deg, #fffdf5 0%, #fff4dc 100%);
+  background: #f7f9ff;
 }
 
 .gallery {
-  background: #f4faff;
+  background: #f4f8ff;
 }
 
 .testimonials {
-  background: #faf5ff;
+  background: #f8fbff;
 }
 
 .contact {
-  background: #f7faff;
+  background: #ffffff;
 }
 
 .about p,
@@ -316,21 +317,21 @@ select {
 }
 
 .service-card {
-  background: linear-gradient(180deg, #ffffff, #fff9eb);
-  border: 1px solid rgba(255, 176, 0, 0.18);
+  background: #ffffff;
+  border: 1px solid rgba(38, 87, 204, 0.12);
   border-radius: 28px;
   padding: 2rem;
   min-height: 240px;
   display: grid;
   gap: 1rem;
-  box-shadow: 0 24px 60px rgba(255, 176, 0, 0.14);
+  box-shadow: 0 24px 60px rgba(15, 34, 67, 0.08);
 }
 
 .service-icon {
   width: 64px;
   height: 64px;
   border-radius: 18px;
-  background: linear-gradient(135deg, rgba(255, 176, 0, 0.16), rgba(255, 176, 0, 0.04));
+  background: rgba(38, 87, 204, 0.12);
   color: var(--accent-dark);
   display: grid;
   place-items: center;
@@ -353,14 +354,14 @@ select {
 }
 
 .benefit-card {
-  background: linear-gradient(135deg, #fff6e3, #fff2d4);
-  border: 1px solid rgba(255, 176, 0, 0.18);
+  background: #ffffff;
+  border: 1px solid rgba(38, 87, 204, 0.12);
   border-radius: 22px;
   padding: 1.6rem;
   text-align: center;
   font-weight: 700;
   color: var(--text);
-  box-shadow: 0 20px 40px rgba(255, 176, 0, 0.1);
+  box-shadow: 0 20px 40px rgba(15, 34, 67, 0.08);
 }
 
 .gallery-grid {
@@ -390,14 +391,14 @@ select {
 }
 
 .testimonial-card {
-  background: linear-gradient(180deg, #ffffff, #fcf6ff);
-  border: 1px solid rgba(255, 176, 0, 0.14);
+  background: #ffffff;
+  border: 1px solid rgba(38, 87, 204, 0.12);
   border-radius: 26px;
   padding: 1.8rem;
   display: grid;
   gap: 1rem;
   min-height: 240px;
-  box-shadow: 0 26px 68px rgba(255, 176, 0, 0.1);
+  box-shadow: 0 26px 68px rgba(15, 34, 67, 0.08);
 }
 
 .testimonial-card p {
@@ -416,13 +417,13 @@ select {
 }
 
 .contact-form {
-  background: linear-gradient(180deg, #ffffff, #fbfbff);
-  border: 1px solid rgba(255, 176, 0, 0.18);
+  background: #ffffff;
+  border: 1px solid rgba(38, 87, 204, 0.12);
   border-radius: 28px;
   padding: 2rem;
   display: grid;
   gap: 1rem;
-  box-shadow: 0 26px 72px rgba(255, 176, 0, 0.1);
+  box-shadow: 0 26px 72px rgba(15, 34, 67, 0.08);
 }
 
 .form-row {
@@ -460,11 +461,11 @@ select {
 }
 
 .contact-box {
-  background: linear-gradient(180deg, #ffffff, #f9fcff);
-  border: 1px solid rgba(14, 39, 63, 0.08);
+  background: #ffffff;
+  border: 1px solid rgba(38, 87, 204, 0.1);
   border-radius: 22px;
   padding: 1.6rem;
-  box-shadow: 0 18px 42px rgba(16, 38, 63, 0.08);
+  box-shadow: 0 18px 42px rgba(15, 34, 67, 0.08);
 }
 
 .contact-box h3 {
@@ -530,11 +531,11 @@ select {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #ffd170, #ff9f0f);
-  color: #071727;
+  background: linear-gradient(135deg, #2657cc, #1f4fac);
+  color: #ffffff;
   padding: 0.95rem 1.4rem;
   border-radius: 999px;
-  box-shadow: 0 24px 60px rgba(255, 176, 0, 0.28);
+  box-shadow: 0 24px 60px rgba(38, 87, 204, 0.24);
   text-decoration: none;
 }
 
