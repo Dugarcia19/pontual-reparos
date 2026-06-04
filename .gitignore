@@ -1,2 +1,22 @@
 # Local Netlify folder
+# Local Netlify folder
 .netlify
+
+# Node
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# VSCode
+.vscode/
+
+# Build
+dist/
+build/

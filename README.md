@@ -49,6 +49,34 @@ Após alguns minutos, seu site estará disponível em `https://<seu-usuario>.git
 2. Conecte o repositório GitHub ou arraste a pasta para o painel "Deploys".
 3. O Netlify publica automaticamente o site.
 
+## Implantação com Git (passo a passo)
+
+1. Inicialize o repositório local e faça o commit inicial:
+
+```bash
+git init
+git add .
+git commit -m "Initial: cleanup, header, styles consolidation, Netlify config"
+git branch -M main
+```
+
+2. Crie um repositório no GitHub e adicione o remote (substitua `<URL-DO-REPO>`):
+
+```bash
+git remote add origin <URL-DO-REPO>
+git push -u origin main
+```
+
+3. No Netlify, conecte o repositório GitHub e configure a branch `main`. Como este é um site estático, não é necessário comando de build — a pasta de publicação é a raiz do repositório.
+
+4. Alternativamente, você pode fazer deploy manual usando o Netlify CLI:
+
+```bash
+npx netlify-cli deploy --dir=. --prod
+```
+
+Se quiser, posso tentar criar o repositório no GitHub e fazer o push remoto por você — basta me fornecer permissão (usar `gh` CLI) ou a URL do repositório remoto.
+
 ### 3) Aparecer no Google
 
 - Após publicar, acesse o Google Search Console.
