@@ -43,6 +43,28 @@ Site profissional para Pontual Reparos de Calhas com layout pronto para publica�
 
 Após alguns minutos, seu site estará disponível em `https://<seu-usuario>.github.io/<nome-do-repositório>/`.
 
+## Links e deploys já configurados
+
+- Netlify (produção): https://drayol-gesso.netlify.app
+- Repositório principal: https://github.com/Dugarcia19/pontual-reparos
+- Repositório do site (cópia): https://github.com/Dugarcia19/pontual-reparos-site
+
+## Notas rápidas
+
+- O site já foi publicado no Netlify (link acima).
+- O código está em ambos os repositórios GitHub listados; o remoto `site` aponta para `pontual-reparos-site`.
+- Para atualizar o site e publicar no Netlify novamente, rode:
+
+```bash
+npx netlify-cli deploy --dir=. --prod
+```
+
+## Próximos passos recomendados
+
+- Validar texto e imagens finais (galeria e logo).
+- Verificar meta tags e `og:image` para redes sociais.
+- Habilitar GitHub Pages se desejar uma alternativa gratuita de hospedagem (Settings → Pages).
+
 ### 2) Usar Netlify
 
 1. Crie uma conta no Netlify.
