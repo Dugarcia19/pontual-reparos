@@ -8,12 +8,14 @@ mobileToggle?.setAttribute('aria-expanded', 'false');
 mobileToggle?.addEventListener('click', () => {
   const isOpen = navList.classList.toggle('open');
   mobileToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  mobileToggle.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
 });
 
 navList?.querySelectorAll('a').forEach((link) => {
   link.addEventListener('click', () => {
     navList.classList.remove('open');
     mobileToggle?.setAttribute('aria-expanded', 'false');
+    mobileToggle?.setAttribute('aria-label', 'Abrir menu');
   });
 });
 
@@ -31,13 +33,23 @@ contactForm?.addEventListener('submit', (event) => {
   const name = document.querySelector('#name').value.trim();
   const phone = document.querySelector('#phone').value.trim();
   const email = document.querySelector('#email').value.trim();
+  const service = document.querySelector('#service').value.trim();
   const message = document.querySelector('#message').value.trim();
 
-  if (!name || !phone || !email || !message) {
-    alert('Por favor, preencha todos os campos antes de enviar.');
+  if (!name || !phone || !service || !message) {
+    alert('Por favor, preencha Nome, Telefone, Serviço e Mensagem antes de enviar.');
     return;
   }
 
-  alert(`Obrigado, ${name}! Sua solicitação foi recebida com sucesso. Entraremos em contato em breve.`);
+  const businessNumber = '5543999378092';
+  const text = `Olá Pontual Reparos,%0A
+*Nome:* ${name}%0A
+*Telefone:* ${phone}%0A
+*E-mail:* ${email || '-'}%0A
+*Serviço:* ${service}%0A
+*Mensagem:* ${message}`;
+
+  const url = `https://wa.me/${businessNumber}?text=${encodeURIComponent(text)}`;
+  window.open(url, '_blank');
   contactForm.reset();
 });
